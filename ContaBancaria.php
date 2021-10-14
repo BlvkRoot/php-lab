@@ -20,7 +20,21 @@
 
         public function obterSaldo() 
         {
-            return 'Obtendo saldo';
+            return 'Saldo atual R$ ' . $this->saldo;
+        }
+
+        public function depositar($valor) 
+        {
+            $this->saldo += $valor;
+
+            return 'Depósito de R$ '. $this->saldo . ' realizado.';
+        }
+
+        public function sacar($valor)
+        {
+            $this->saldo -= $valor;
+
+            return 'Saque de R$ '. $this->saldo . ' realizado.';
         }
 
     }
@@ -30,8 +44,26 @@
         "Miles Munroe",
         "654646465222",
         "0552244555",
-        20.35
+        0
     );
 
 
-    var_dump($conta->obterSaldo());
+   echo $conta->obterSaldo();
+
+   echo PHP_EOL;
+
+   echo $conta->depositar(500);
+
+   echo PHP_EOL;
+
+   echo $conta->obterSaldo();
+
+   
+   echo PHP_EOL;
+
+   echo $conta->sacar(200);
+
+   echo PHP_EOL;
+
+   echo $conta->obterSaldo();
+    
