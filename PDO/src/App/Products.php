@@ -3,9 +3,7 @@
     
     namespace App;
 
-    require_once('./Database/Connection.php');
-
-    use Database\Connection;
+    use App\Database\Connection;
 
     class Products 
     {

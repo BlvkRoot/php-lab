@@ -1,5 +1,5 @@
 <?php
-    require_once('Products.php');
+    require __DIR__ . './vendor/autoload.php';
 
     use App\Products;
 
