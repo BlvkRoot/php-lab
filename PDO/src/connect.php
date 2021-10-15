@@ -7,8 +7,6 @@
         $dsn = 'mysql:host=localhost;dbname=test_bd';
         $pdo = new PDO($dsn, 'root', '');
 
-        echo 'Connection successful';
-
     } catch (Exception $e) {
         echo $e->getMessage();
 
